@@ -1,8 +1,31 @@
-# Compiled class file
+
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
+
+# Temporary files
+*.tmp
+
+# Maven build directory
+target/
+
+# Allure test results
+allure-results/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Java virtual machine crash logs
+hs_err_pid*
+replay_pid*
 
 # BlueJ files
 *.ctxt
@@ -10,7 +33,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package files
 *.jar
 *.war
 *.nar
@@ -18,7 +41,3 @@
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
