@@ -7,11 +7,13 @@ import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
+import pages.ProductsPage;
 
 public class LoginSteps {
 
     private final TestContext testContext;
     private LoginPage loginPage;
+    private ProductsPage productsPage;
 
     public LoginSteps(TestContext testContext) {
         this.testContext = testContext;
@@ -33,7 +35,8 @@ public class LoginSteps {
 
     @Then("the user should be directed to the products page")
     public void theUserShouldBeDirectedToTheProductsPage() {
-        Assertions.assertTrue(loginPage.isProductsPageDisplayed(),
+        productsPage = new ProductsPage(testContext.getDriver());
+        Assertions.assertTrue(productsPage.isProductsPageDisplayed(),
                 "User was not redirected to the products page");
     }
 

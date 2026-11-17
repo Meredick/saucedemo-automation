@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public abstract class BasePage {
     protected final WebDriver driver;
@@ -48,6 +49,10 @@ public abstract class BasePage {
 
     public void navigateTo(String url) {
         driver.get(url);
+    }
+
+    public List<WebElement> findElements(By locator) {
+        return driver.findElements(locator);
     }
 
 }

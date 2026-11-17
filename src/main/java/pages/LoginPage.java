@@ -24,10 +24,6 @@ public class LoginPage extends BasePage {
         navigateTo(LOGIN_URL);
     }
 
-    public boolean isProductsPageDisplayed(){
-        return driver.getCurrentUrl().contains("/inventory.html");
-
-    }
 
     public String getErrorMessage(){
         return getText(loginErrorMessage);
