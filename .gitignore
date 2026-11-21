@@ -13,6 +13,7 @@ target/
 
 # Allure test results
 allure-results/
+allure-report/
 
 # IntelliJ IDEA
 .idea/

@@ -5,6 +5,7 @@ Feature: Checkout
     Given the user is logged in
 
 
+  @regression
   Scenario: Navigate to checkout overview with valid information
     When the user adds the product "Sauce Labs Backpack" to the cart
     And the user opens the shopping cart
@@ -13,6 +14,7 @@ Feature: Checkout
     Then the user should be directed to the checkout overview page
 
 
+  @regression
   Scenario Outline: Validate required checkout information
     When the user adds the product "Sauce Labs Backpack" to the cart
     And the user opens the shopping cart
@@ -26,6 +28,7 @@ Feature: Checkout
       | last name  | Error: Last Name is required    |
 
 
+  @regression
   Scenario: Verify product information in checkout overview
     When the user adds the product "Sauce Labs Backpack" to the cart
     And the user opens the shopping cart
@@ -35,6 +38,7 @@ Feature: Checkout
     And the checkout overview should display the correct quantity and price
 
 
+  @regression @smoke
   Scenario: Complete an order successfully
     When the user adds the product "Sauce Labs Backpack" to the cart
     And the user opens the shopping cart

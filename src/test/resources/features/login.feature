@@ -3,10 +3,12 @@ Feature: Login
   Background:
     Given The user is on the login page
 
+  @regression @smoke
   Scenario: Successful login
     When the user enters "standard_user" as username and "secret_sauce" as password
     Then the user should be directed to the products page
 
+  @regression
   Scenario Outline: Login with invalid credentials
     When the user enters "<username>" as username and "<password>" as password
     Then the user should see an error message "<expectedMessage>"
